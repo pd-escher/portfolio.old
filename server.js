@@ -4,38 +4,36 @@ const cors = require('cors');
 
 var express = require('express');
 const app = express();
-
+app.use(cors());
 
 // deployed to heroku
 
-// function folderpath() {
-//     return process.argv.length > 2 ? process.argv[2] : './APK/hello'
-// }
+function folderpath() {
+    return process.argv.length > 2 ? process.argv[2] : './APK/hello'
+}
 
-// const child_process = require('child_process');
+const child_process = require('child_process');
 
 // UI
 app.get('/', function (req, res) {
     res.status(200).send('Hello World!');
 });
 
-app.use(cors());
-
 // APKs
-// app.get("/apk/", (req, res) => {
+app.get("/apk/", (req, res) => {
 
-//     const APK = './APK'
-//     const folder = 'hello'
+    const APK = './APK'
+    const folder = 'hello'
 
-//     // we want to use a sync exec to prevent returning response
-//     // before the end of the compression process
-//     child_process.execSync(`zip -r archive *`, {
-//         cwd: folderpath()
-//     });
+    // we want to use a sync exec to prevent returning response
+    // before the end of the compression process
+    child_process.execSync(`zip -r archive *`, {
+        cwd: folderpath()
+    });
 
-//     // zip archive of your folder is ready to download
-//     res.download(folderpath() + `/archive.zip`);
-// });
+    // zip archive of your folder is ready to download
+    res.download(folderpath() + `/archive.zip`);
+});
 
 // Listen
 

@@ -3,7 +3,7 @@ import AppCard from './AppCard'
 
 const Apps = () => {
     return (
-        <div>
+        <div class="apps">
             <AppCard
                 appname="stonks"
                 appinfo="Simple Finance Management App"

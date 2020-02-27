@@ -1,17 +1,14 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import 'axios';
 
 const AppCard = ({ appname, appinfo }) => {
-    var href = '/apk/'+appname
+    var href = '/apk/' + appname
     return (
-        <div className="card app-card" style={{width: "18rem"}}>
+        <div className="app-card">
             {/* <img className="card-img-top" src="..." alt="Card image cap" /> */}
-            <div className="card-body">
-                <h1 className="card-title">{appname.charAt(0).toUpperCase() + appname.substring(1)}</h1>
-                <p className="card-text">{appinfo}</p>
-                <a href={href} className="btn btn-primary">Download {appname}</a>
-            </div>
+            <h1 className="app-card-title">{appname.charAt(0).toUpperCase() + appname.substring(1)}</h1>
+            <p className="app-card-text">{appinfo}</p>
+            <a href={href} className="app-card-btn">Download APK</a>
         </div>
     )
 }

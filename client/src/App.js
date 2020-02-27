@@ -3,19 +3,24 @@ import React from 'react';
 import Header from './Header';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import ContentView from './ContentView';
+import { BrowserRouter } from 'react-router-dom';
+import './style.css'
 
-function App() {
+function PrimaryLayout() {
   return (
-    <div style={{ backgroundColor: 'black' }}>
-      <Header/>
-      <div class="container-fluid containerr">
-        <div class="row-md-auto">
-          <Navbar />
-        </div>
-      </div>
+    <div class='containerr'>
+      <Navbar />
+      <Header />
+      <main>
+        <ContentView />
+      </main>
       <Footer />
     </div>
   );
 }
 
-export default App;
+// const App = () => <PrimaryLayout/>
+const App = () => (<BrowserRouter><PrimaryLayout /></BrowserRouter>)
+
+export default App

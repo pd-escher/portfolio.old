@@ -1,9 +1,10 @@
 import React from 'react'
 
 const Contact = () => {
+    var string = "<currently_building/>"
     return (
-        <div>
-            <h1>Contact</h1>
+        <div class="contact">
+            <h1>{string}</h1>
         </div>
     )
 }

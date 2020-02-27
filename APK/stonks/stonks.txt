@@ -1,0 +1,12 @@
+-----------------------------------------------------------------------------
+STONKS
+-----------------------------------------------------------------------------
+A simple finance management app.
+
+
+How to use:
+	- Tap on Balance to Change
+	- Hold and Drag the Money Button to spend
+	- Enter any other value for confirmation
+
+-----------------------------------------------------------------------------

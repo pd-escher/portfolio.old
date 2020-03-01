@@ -12,9 +12,7 @@ function PrimaryLayout() {
     <div class='containerr'>
       <Navbar />
       <Header />
-      <main>
-        <ContentView />
-      </main>
+      <ContentView />
       <Footer />
     </div>
   );

@@ -35,6 +35,10 @@ app.get('/', function (req, res) {
     res.status(200).sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
+app.get(/^\/(?!apk).*/, function (req, res) {
+    res.status(200).sendFile(path.join(__dirname + "/client/build/index.html"));
+});
+
 // APKs
 app.get("/apk/:appname", (req, res) => {
     var appname = req.params.appname

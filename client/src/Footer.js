@@ -6,7 +6,6 @@ import { FaMedium } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import './style.css'
 
-
 const Footer = () => {
     return (
         <div class="d-flex justify-content-center footer">
